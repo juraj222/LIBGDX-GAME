@@ -1,0 +1,33 @@
+
+professor.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+hero10
+  rotate: false
+  xy: 1, 1
+  size: 30, 34
+  orig: 30, 34
+  offset: 0, 0
+  index: -1
+hero30
+  rotate: false
+  xy: 33, 1
+  size: 30, 34
+  orig: 30, 34
+  offset: 0, 0
+  index: -1
+hero
+  rotate: false
+  xy: 65, 1
+  size: 29, 34
+  orig: 29, 34
+  offset: 0, 0
+  index: -1
+hero20
+  rotate: false
+  xy: 96, 1
+  size: 29, 34
+  orig: 29, 34
+  offset: 0, 0
+  index: -1

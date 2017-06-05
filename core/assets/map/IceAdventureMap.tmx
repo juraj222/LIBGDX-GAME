@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="2017.05.26" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="29" tileheight="34" nextobjectid="1">
+ <tileset firstgid="1" name="snow" tilewidth="29" tileheight="34" tilecount="12" columns="4">
+  <image source="snow.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="13" name="ice" tilewidth="29" tileheight="34" tilecount="12" columns="4">
+  <image source="ice.png" width="128" height="128"/>
+ </tileset>
+ <layer name="Snow" width="100" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OoQEAAAgDoOn/R/uA3SCBTiUpAAAAAAAAAAAAAAAAAAAAAAAAeKwX1yd+GsQ2O3UgTgAA
+  </data>
+ </layer>
+ <layer name="Ice" width="100" height="50">
+  <properties>
+   <property name="blocked" value="true"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WUY7EIAxD5wJz/+vux/5UbAE7TkLajSWkEUPA5JXA9/P5fLuVai1czSNfq/w0D38pOWkeurz33DzO6UTdav2qSu3671Lz0Dz85JWD5sHLa//RNayFC8lZ88gTmq/mkSM2X81Dk5Kr2ZjmwUvNxy62eXBSWbDrNI+/8sgBEsvWsNU8Xq2SvDigLNgco+PexsUiZi/snq/jo3L5Ji6M99nYsX/8nZmrpzKxeEZYjONOfbdP4mLxuLoDVn0nc1KdidXX7k5e9Z3OR0Umih+WxdhfIRcVPFylvlvYee94nFY1JowQ7+i5qZSDJzFh6yx6bizvafRbsL5L1Di0KWLfvd480D2pe7cyR8eu+ryFrlGZh9XHuIbS5yE2r9a4DB6WmjPzMpt715clq5fs88HOgfJgx0ZL+Tastd0i9jywPCqdkauq+LjTyGHFhv3m0VqWrQoeZlJq1ap/F5OVkyrn1HJnWeay8EDmVbWq5+i9nOFlN/4u3sIC+f9ubQ9Zvy+PN9JqPc8zMovZjfGcz2sOhkfEm4mJYdZQx3jEWGJ3Zx5tzFpRPKLvwaizahnPsPHkiMRY5lMUefdY+WWwuPPoNZfiN2uvjDI4qB5nfrOUySNTXt9Mtt7Mgxl7koHqpYLvnaLrYZRm9x4aU1HV/c00873jUn2/1f3NtPL8ZB5Pk1o3lXdrt5j2AwQJRDEgTgAA
+  </data>
+ </layer>
+</map>
