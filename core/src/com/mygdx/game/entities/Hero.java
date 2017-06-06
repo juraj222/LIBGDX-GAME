@@ -7,10 +7,12 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.mygdx.game.Resources;
 import com.sun.javafx.scene.traversal.Direction;
+
 
 /**
  * Created by juraj on 6/1/2017.
@@ -18,7 +20,6 @@ import com.sun.javafx.scene.traversal.Direction;
 public class Hero extends Actor {
     private PlayerStates state = PlayerStates.STANDING;
     private Directions direction = Directions.RIGHT;
-    private int x = 0, y = 0, width = 29, height = 34;
     private InputProcessor inputProcessor;
     private int numPlayer;
     private String name;
@@ -28,15 +29,17 @@ public class Hero extends Actor {
     private Animation movingAnim;
     private float stateTime;
     private SpriteBatch spriteBatch;
-
+    private Rectangle rec;
     private Action currentAction;
     private Animation currentAnimation;
 
-    public Hero(int x, int y, int numPlayer,String name) {
-        this.x = x;
-        this.y = y;
+    public Hero( int numPlayer,float x, float y,String name) {
+        super.setSize(29,34);
+        super.setPosition(x,y);
+
         this.numPlayer = numPlayer;
         this.name = name;
+        rec = new Rectangle(getX(),getY(),getWidth(),getHeight());
         TextureAtlas heroAtlas = Resources.getInstance().getManager().get("hero/professor.pack", TextureAtlas.class);
 
         standingAnim = new Animation<TextureAtlas.AtlasRegion>(0.06f, heroAtlas.findRegion("hero"), heroAtlas.findRegion("hero10"));
@@ -73,8 +76,7 @@ public class Hero extends Actor {
         }
 
         spriteBatch.begin();
-
-        spriteBatch.draw(currentFrame, x, y, width, height);
+        spriteBatch.draw(currentFrame, getX(), getY(), getWidth(), getHeight());
 
         spriteBatch.end();
     }
@@ -83,6 +85,11 @@ public class Hero extends Actor {
     public void act(float delta) {
         super.act(delta);
         update(delta);
+    }
+
+    public Rectangle getRectangle() {
+        rec.setPosition(super.getX(),super.getY());
+        return rec;
     }
 
     public PlayerStates getState() {
@@ -99,13 +106,5 @@ public class Hero extends Actor {
 
     public void setDirection(Directions direction) {
         this.direction = direction;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 }
